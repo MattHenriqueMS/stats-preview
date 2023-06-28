@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 70%;
+  height: 500px;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 10px;
+}
+
+.texto {
+  height: 100%;
+  width: 50%;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.primeiro-titulo {
+  font-size: 35px;
+  margin-bottom: 2rem;
+}
+
+.primeiro-titulo b {
+  color: hsl(277, 64%, 61%);
+}
+
+.paragrafo {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 18px;
+  margin-bottom: 6rem;
+}
+
+.numeros {
+  display: flex;
+  justify-content: space-between;
+}
+
+.numeros .num {
+  font-size: 25px;
+  margin-bottom: 5px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+
+.numeros .txt {
+  color: hsla(0, 0%, 100%, 0.75);
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.imagem {
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+
+.imagem img {
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.imagem .overlay {
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: hsla(277, 64%, 61%, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 375px) {
+  body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  } 
+
+  .card {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .texto {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .primeiro-titulo {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .paragrafo {
+    margin-bottom: 2.5rem;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .numeros {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .numeros .txt {
+    margin-bottom: 1rem;
+  }
+
+  .imagem {
+    width: 100%;
+    order: -1;
+  }
+
+  .imagem img {
+    background-image: url(./images/image-header-mobile.jpg);
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 0;
+  }
+
+  .imagem .overlay {
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 0;
+    width: 100%;
+  }
+}
